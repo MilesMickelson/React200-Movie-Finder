@@ -2,3 +2,251 @@ body {
   background: #ECE9E6;
   background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
 }
+
+// Layout formatting
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Main Header */
+#mainHeader-box {
+  border-radius: round;
+  margin: 0.5em auto 0em auto;
+  padding: 1.75em 0em 0em 2em;
+  height: 15em;
+  width: 58em;
+  background-color: lightgrey;
+  border: 1px solid #ccc;
+}
+
+#mainHeader {
+  all: unset;
+  font-size: 4em;
+  color: #2196F3;
+}
+
+/* Search Input */
+#movieSearch-wrap {
+  margin: 0.5em auto 0em auto;
+  width: 58em;
+}
+
+.search-bar input[type=text] {
+  padding: 0.1em 0em 0.1em 1em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  float: left;
+  height: 1.813em;
+  width: 93%;
+  background: lightgrey;
+}
+
+/* Style the submit button */
+.search-bar button {
+  float: right;
+  width: 7%;
+  padding: 0.2em;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid #0b7dda;
+  border-left: none;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background: #0b7dda;
+}
+
+.search-bar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style main movie info display */
+.movie-box {
+  height: 12em;
+  width: 58em;
+  margin: 0.5em auto 0em auto;
+  background-color: lightgrey;
+  border: 1px solid #ccc;
+  display: flex;
+}
+
+.poster-wrap {
+  height: 100%;
+  width: 25%;
+  text-align: center;
+}
+
+.movie-poster {
+  max-height: 11em;
+  max-width: 13.5em;
+  margin: 0.5em auto 0em auto;
+  text-align: center;
+}
+
+.info-box {
+  float: right;
+  width: 75%;
+}
+
+.movie-title {
+  font-size: 2em;
+  margin-left: 15px;
+  text-align: left;
+}
+
+.release-year {
+  font-size: 1.5em;
+  margin-left: 15px;
+  text-align: left;
+}
+
+hr {
+  height: 1px;
+  background-color: white;
+  float: left;
+  width: 95%;
+}
+
+.plot {
+  font-size: 1em;
+  max-width: 95%;
+  margin-left: 15px;
+  float: left;
+}
+
+.moreInfo-row {
+  bottom: 0;
+}
+
+.moreInfo-row button {
+  float: right;
+  width: 25%;
+  margin: 0em 1em 1em;
+  text-align: center;
+  color: white;
+  background-color: #2196F3;
+  font-size: 17px;
+  border: 1px solid #0b7dda;
+  cursor: pointer;
+  bottom: 0;
+}
+
+.moreInfo-row button:hover {
+  background: #0b7dda;
+  border: 1px solid #0b7dda;
+  cursor: pointer;
+}
+
+/* Style more Information display-after same header */
+.goback-wrap {
+  width: 58em;
+  text-align: center;
+  margin: 0.5em auto 0em auto;
+}
+.goBack-button {
+  color: white;
+  background-color: #2196F3;
+  border: 1px solid #0b7dda;
+  float: left;
+  cursor: pointer;
+}
+
+.goBack-button:hover {
+  background: #0b7dda;
+  border: 1px solid #0b7dda;
+  cursor: pointer;
+}
+
+.moreInfo-wrapper {
+  align-self: center;
+  width: 58em;
+  display: flex;
+  overflow: auto;
+  vertical-align: top;
+  margin: 0.5em auto 0em auto;
+}
+
+.moreInfo-row {
+  display: flex;
+  margin-top: 0.5em;
+  vertical-align: top;
+}
+
+.moreInfoBox-wrap {
+  width: 38.75em;
+}
+
+.header-name {
+  all: unset;
+  font-size: 1.25em;
+}
+
+.moreInfo-header {
+  all: unset;
+  box-sizing: border-box;
+  height: 2.125em;
+  width: 38.75em;
+  padding: 0.4em 0em 0em 0.5em;
+  float: left;
+  color: white;
+  background-color: #2196F3;
+  border: 1px solid #0b7dda;
+  border-bottom: none;
+}
+
+.moreInfo-box {
+  all: unset;
+  box-sizing: border-box;
+  height: 26em;
+  width: 38.75em;
+  margin-left: 0.5em;
+  float: left;
+  border: 1px solid #0b7dda;
+}
+
+.movie-title {
+  margin-top: 5px;
+}
+
+.release-year .plot .awards .metaScore .imdb  {
+  margin-top: 1em;
+}
+
+.movie-length {
+  margin-left: 5em;
+}
+
+.movie-genre {
+  float: right;
+  margin-right: 1em;
+}
+
+.awards .metaScore .imdb {
+  margin-left: 1em;
+}
