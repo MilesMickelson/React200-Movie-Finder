@@ -1,7 +1,7 @@
 const defaultState = {
-  movie: "",
-  movieInfo: "",
-  error: "",
+  movie: '',
+  movieInfo: '',
+  error: '',
   lineItems: []
 };
 
@@ -9,31 +9,31 @@ export default function MovieSearchReducer(state = defaultState, action) {
   const { type, payload } = action;
 
   switch (type) {
-    case "UPDATE_MOVIE_SEARCH": {
+    case 'UPDATE_MOVIE_SEARCH': {
       return {
         ...state,
         movie: payload.movie
       };
     }
 
-    case "FETCH_MOVIES_PENDING": {
+    case 'FETCH_MOVIES_PENDING': {
       return {
         ...state
       };
     }
 
-    case "FETCH_MOVIES_FULFILLED": {
+    case 'FETCH_MOVIES_FULFILLED': {
       return {
-        movie: "",
+        movie: '',
         lineItems: action.payload.data
       };
     }
 
-    case "FETCH_MOVIES_REJECTED": {
+    case 'FETCH_MOVIES_REJECTED': {
       return {
         ...state,
-        movie: "",
-        movieInfo: "",
+        movie: '',
+        movieInfo: '',
         error: true
       };
     }
@@ -43,5 +43,3 @@ export default function MovieSearchReducer(state = defaultState, action) {
     }
   }
 }
-
-
